@@ -97,4 +97,11 @@
         android:enabled="false"
         android:text="下一步"
         android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/jia"
+        android:text="嗨，我加进来了"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

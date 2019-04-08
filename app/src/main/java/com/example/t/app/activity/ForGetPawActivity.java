@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
@@ -33,6 +34,8 @@ public class ForGetPawActivity extends BaseActivity {
     EditText liuweishu;
     @BindView(R.id.but_denglu)
     Button butDenglu;
+    @BindView(R.id.jia)
+    TextView jia;
     @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
         @Override
