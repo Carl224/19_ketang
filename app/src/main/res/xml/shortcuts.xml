@@ -1,0 +1,54 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/code"
+        android:shortcutDisabledMessage="@string/settings_disable_msg"
+        android:shortcutId="settings"
+        android:shortcutLongLabel="@string/settings_long_name"
+        android:shortcutShortLabel="@string/settings_short_name">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.t.app.activity_erweima.android.CaptureActivity"
+            android:targetPackage="com.example.t.app" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/icon_share_home"
+        android:shortcutDisabledMessage="@string/register_disable_msg"
+        android:shortcutId="register"
+        android:shortcutLongLabel="@string/register_long_name"
+        android:shortcutShortLabel="@string/register_short_name">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.t.app.activity.RegisterActivity"
+            android:targetPackage="com.example.t.app" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_add_desktop"
+        android:shortcutDisabledMessage="@string/zhuce_disable_msg"
+        android:shortcutId="zhuce"
+        android:shortcutLongLabel="@string/zhuce_long_name"
+        android:shortcutShortLabel="@string/zhuce_short_name">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.t.app.activity.ZhuCeActivity"
+            android:targetPackage="com.example.t.app" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/qitaxinjinguanli"
+        android:shortcutDisabledMessage="@string/set_disable_msg"
+        android:shortcutId="set"
+        android:shortcutLongLabel="@string/set_long_name"
+        android:shortcutShortLabel="@string/set_short_name">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.t.app.activity_set.SystemSetActivity"
+            android:targetPackage="com.example.t.app" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

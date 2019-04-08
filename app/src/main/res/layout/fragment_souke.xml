@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/souke_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="搜课"
+            android:textColor="#000000"
+            android:textSize="@dimen/dp_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/souke_sousuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@mipmap/nav_search_new" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:layout_below="@id/souke_top"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/leixing"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_38"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawableRight="@drawable/souke_choose"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:text="考试类型" />
+
+
+        <CheckBox
+            android:id="@+id/diqu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_38"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawableRight="@drawable/souke_choose"
+            android:gravity="center"
+            android:text="@string/souke_diqu"
+            android:textColor="#000" />
+
+
+        <CheckBox
+            android:id="@+id/paixu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_38"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawableRight="@drawable/souke_choose"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp_10"
+            android:text="@string/souke_paixu"
+            android:textColor="#000" />
+
+
+        <CheckBox
+            android:id="@+id/saixuan"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_38"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawableRight="@drawable/souke_choose"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp_10"
+            android:text="@string/souke_saixuan"
+            android:textColor="#000" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/souke_br"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll"
+        android:background="#EBEBEB" />
+
+    <LinearLayout
+        android:id="@+id/gif_souke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_150"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/img_souke"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="@dimen/dp_100"
+            android:src="@mipmap/icon_blank_lesson" />
+
+        <TextView
+            android:id="@+id/text_souke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="暂无课程" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/yiji"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="match_parent"
+        android:layout_below="@id/souke_br"
+        android:background="#F3F3F3"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:visibility="gone"></ListView>
+
+    <ListView
+        android:id="@+id/erji"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/souke_br"
+        android:layout_toRightOf="@id/yiji"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:visibility="gone"></ListView>
+
+    <ListView
+        android:id="@+id/diqu_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/souke_br"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:scrollbars="none"
+        android:visibility="gone"></ListView>
+</RelativeLayout>

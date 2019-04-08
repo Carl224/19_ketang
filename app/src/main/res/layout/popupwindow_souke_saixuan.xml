@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="课程类型"
+        android:textColor="#000000"
+        android:textSize="@dimen/sp_14" />
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/leixing_but1"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_7"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_7"
+            android:text="免费课程"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+
+
+        <RadioButton
+            android:id="@+id/leixing_but2"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_7"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_7"
+            android:text="付费课程"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+
+
+        <RadioButton
+            android:id="@+id/leixing_but3"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_7"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_7"
+            android:text="免费课程"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="价格区间"
+        android:textColor="#000000"
+        android:textSize="@dimen/sp_14" />
+
+    <RadioGroup
+        android:id="@+id/rg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/jiage_but1"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:text="￥1-￥99"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+
+
+        <RadioButton
+            android:id="@+id/jiage_but2"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:text="￥100-￥499"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+
+
+        <RadioButton
+            android:id="@+id/jiage_but3"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:text="￥500-￥999"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="包含课件"
+        android:textColor="#000000"
+        android:textSize="@dimen/sp_14" />
+
+    <RadioGroup
+        android:id="@+id/rg3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/kejian_but1"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:text="视频"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+
+
+        <RadioButton
+            android:id="@+id/kejian_but2"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but"
+            android:button="@null"
+            android:gravity="center"
+            android:text="直播"
+            android:textColor="@drawable/souke_but_text"
+            android:textSize="@dimen/sp_12" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#EBEBEB" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_9"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cls"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but_cls"
+            android:text="清空" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:background="@drawable/souke_but_ok"
+            android:text="确定"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="bule">#0073EC</color>
+    <color name="br">#E3E3E3</color>
+    <color name="back">#000000</color>
+    <color name="button_yes">#3594C9</color>
+    <color name="button_no">#00D5FF</color>
+
+    <color name="get_code_no">#E1E1E1</color>
+    <color name="get_code_yes">#0079D7</color>
+    <color name="lijidneglu">#4DB8FF</color>
+    <color name="live_item_text">#0AB3F2</color>
+
+    <color name="contents_text">#000000</color>
+    <color name="encode_view">#ffffff</color>
+    <color name="possible_result_points">#ffbd21</color>
+    <color name="result_minor_text">#c0c0c0</color>
+    <color name="result_points">#99cc00</color>
+    <color name="result_text">#ffffff</color>
+    <color name="result_view">#000000</color>
+    <color name="status_text">#ffffff</color>
+    <color name="viewfinder_mask">#50000000</color>
+    <color name="react">#ffffff</color>
+    <color name="scanLineColor">#ffffff</color>
+    <color name="defaultColor">#ffffff</color>
+    <color name="red">#ff0006</color>
+    <color name="black">#FF000000</color><!-- 全黑 -->
+    <color name="green">#09E600</color>
+    <color name="but_d">#14B6F2</color>
+    <color name="but_x">#8A8A8A</color>
+</resources>

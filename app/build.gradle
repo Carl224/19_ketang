@@ -1,0 +1,123 @@
+apply plugin: 'org.greenrobot.greendao' // 第二部apply plugin
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 27
+    //
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.example.t.app"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /*配置渠道*/
+    productFlavors {
+        yingyongbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+    }
+
+    //生成GreenDao配置
+    greendao {
+        //数据库版本
+        schemaVersion 1
+        //设置Daomaster,DaoSession,Dao包名  放置这些类的包全路径
+        daoPackage 'com.example.t.application.dao'
+        //设置Daomaster,DaoSession目录
+        targetGenDir 'src/main/java'
+    }
+    android {
+        defaultConfig {
+            vectorDrawables.useSupportLibrary = true
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+        }
+    }
+}
+//版本兼容
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.1.1'
+            }
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //查找控件
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //网络请求框架
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+//    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    //图片解析框架
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //Toobar的依赖
+    implementation 'com.android.support:design:27.1.1'
+//    implementation 'com.youth.banner:banner:1.4.10'
+    //gif封装
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+    //数据库框架
+    implementation 'org.greenrobot:greendao:3.2.2'
+    // 第三部导依赖 add library
+    implementation files('libs/core-3.3.0.jar')
+    //图片选择控件
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    //滑动手势
+    implementation 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //饺子视频
+    implementation 'cn.jzvd:jiaozivideoplayer:6.0.0'
+    implementation 'com.danikula:videocache:2.7.0'
+    //三方各jar包
+    implementation files('libs/NvAndroidStreamingSdk.jar')
+    implementation files('libs/umeng-common-1.5.4.jar')
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-full-6.9.4.jar')
+    implementation files('libs/umeng-share-sina-full-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-full-6.9.4.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+    implementation files('libs/wechat-sdk-android-without-mta-5.1.4.jar')
+    implementation files('libs/weiboSDKCore.jar')
+    implementation files('libs/open_sdk_r5990_lite.jar')
+    //消息推送
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+//    implementation 'com.umeng.sdk:utdid:1.1.5.3'
+    //推送SDK
+    implementation 'com.umeng.sdk:push:4.2.0'
+    //友盟统计
+    implementation 'com.umeng.sdk:analytics:7.5.0'
+    // 支付宝 SDK AAR 包所需的配置
+    implementation(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar')
+    //条目动画
+//    implementation 'jp.wasabeef:recyclerview-animators:2.2.7'
+    //封装列表
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+}

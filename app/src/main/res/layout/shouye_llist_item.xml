@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="@dimen/dp_206" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:maxLines="2"
+        android:text="国考密押预测"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/item_img" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_name">
+
+        <TextView
+            android:id="@+id/item_keshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9课时" />
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="￥29"
+            android:textColor="#FF0000" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

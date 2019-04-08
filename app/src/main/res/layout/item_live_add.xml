@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/live_add_item"
+            android:gravity="center"
+            android:padding="@dimen/dp_20"
+            android:text="考验"
+            android:textColor="@color/live_item_text"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tv"
+            android:button="@null"
+            android:drawableRight="@drawable/live_add_btn"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
