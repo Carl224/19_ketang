@@ -31,6 +31,7 @@ public class RegisterActivity extends BaseActivity {
     ImageView guanbi;
     @BindView(R.id.zhuce)
     TextView zhuce;
+
     @BindView(R.id.phone)
     EditText phone;
     @BindView(R.id.clean)
